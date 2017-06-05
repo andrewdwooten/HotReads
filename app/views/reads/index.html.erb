@@ -1,1 +1,8 @@
 <h1 align='center'>Hot Reads</h1>
+<iframe src="https://giphy.com/embed/eo9930rU7tZAc" width="480" height="203" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<ol>
+  <% @reads.each do |read| %>
+    <li>
+      <h3 align ><%= read.url %></h3>
+    </li>
+</ol>
