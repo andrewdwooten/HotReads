@@ -1,8 +1,12 @@
 class Api::V1::ReadsController < ApplicationController
   protect_from_forgery with: :null_session
   def create
-    Read.create(read_params)
-    render json: { status: 200}
+    read = Read.new(read_params)
+    if read.save
+    render json: read
+    else
+      render json: {status: 300}
+    end
   end
 
 private
