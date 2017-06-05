@@ -13,7 +13,8 @@ describe 'application receives get request for hot reads', :type => :request do
 
       hot_reads = JSON.parse(response.body)
 
-      expect(object['url']).to eq('http://www.google.com')
-      expect(Read.count).to eq(1)
+      expect(hot_reads["www.netflix.com"]).to eq(3)
+      expect(hot_reads["www.yahoo.com"]).to eq(2)
+      expect(hot_reads["www.google.com"]).to eq(1)
   end
 end

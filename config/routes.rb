@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "reads#index"
+  get '/api/v1/hot_reads', to: "api/v1/reads#hot_reads"
 
   resources :reads, only: [:index]
   namespace :api do
