@@ -1,13 +1,10 @@
 <h1 align='center'>Hot Reads</h1>
+<h5 align='center'>Top to Bottom from Hot to Cold</h5>
 <div align='center'>
   <iframe src="https://giphy.com/embed/eo9930rU7tZAc" width="480" height="203" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
-<div align='center'>
-  <ol align='center' class='hot-reads-list'>
+  <div class='hot-reads-list'>
     <% @reads.each do |read| %>
-      <li>
-        <h3 align ><%= read.url %></h3>
-      </li>
+      <h3 align='center'><%= read[0] %></h3>
     <% end %>
-  </ol>
-</div>
+  </div>
